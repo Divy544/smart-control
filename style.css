@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Control Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Dashboard</h1>
+    <button onclick="turnOn('Lamp1')">Turn ON Lamp1</button>
+    <button onclick="turnOff('Lamp1')">Turn OFF Lamp1</button>
+    <br><br>
+    <label for="day">Day:</label>
+    <select id="day">
+      <option>Everyday</option>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select><br><br>
+
+    <label>ON Time: <input type="time" id="onTime" /></label><br><br>
+    <label>OFF Time: <input type="time" id="offTime" /></label><br><br>
+    <button onclick="setTimer('Lamp1')">Set Timer</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
